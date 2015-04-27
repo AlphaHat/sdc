@@ -25,10 +25,10 @@ func (self *MainHandler) Get() {
 	tab := template.HTMLEscapeString(strings.TrimSpace(self.GetString(":tab")))
 
 	url := "/"
-	if tab == "lastest" {
-		url = "/lastest/"
+	if tab == "latest" {
+		url = "/latest/"
 		tab = "id"
-		self.Data["tab"] = "lastest"
+		self.Data["tab"] = "latest"
 	} else if tab == "hotness" {
 		url = "/hotness/"
 		tab = "hotness"
@@ -38,9 +38,9 @@ func (self *MainHandler) Get() {
 		tab = "unanswered"
 		self.Data["tab"] = "unanswered"
 	} else {
-		url = "/lastest/"
+		url = "/latest/"
 		tab = "id"
-		self.Data["tab"] = "lastest"
+		self.Data["tab"] = "latest"
 	}
 
 	pagesize := 30

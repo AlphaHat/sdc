@@ -16,12 +16,12 @@
         <div id="main" class="col-md-9">
             <div class="tab-nav">
                 <h2 class="common-title">
-                    {{if .tab}}{{if eq .tab "lastest"}}Latest{{end}}{{end}}
+                    {{if .tab}}{{if eq .tab "latest"}}Latest{{end}}{{end}}
                     {{if .tab}}{{if eq .tab "hotness"}}Hot{{end}}{{end}}
                     {{if .tab}}{{if eq .tab "unanswered"}}Unanswered{{end}}{{end}}
                 </h2>
                 <nav class="sub-tab">
-                    <a {{if .tab}}{{if eq .tab "lastest"}}class="current" {{end}}{{end}}href="/lastest/">Latest</a>
+                    <a {{if .tab}}{{if eq .tab "latest"}}class="current" {{end}}{{end}}href="/latest/">Latest</a>
                     <a {{if .tab}}{{if eq .tab "hotness"}}class="current" {{end}}{{end}}href="/hotness/">Hot</a>
                     <a {{if .tab}}{{if eq .tab "unanswered"}}class="current" {{end}}{{end}}href="/unanswered/">Unanswered</a>
                 </nav>
@@ -39,7 +39,7 @@
                         <div class="p-summary">
 
                         <h2>
-                            {{if .tab}}{{if eq .tab "lastest"}}Latest..{{end}}{{end}}
+                            {{if .tab}}{{if eq .tab "latest"}}Latest..{{end}}{{end}}
                             {{if .tab}}{{if eq .tab "hotness"}}Hot..{{end}}{{end}}
                             {{if .tab}}{{if eq .tab "unanswered"}}Unanswered..{{end}}{{end}}
                         </h2>
