@@ -26,7 +26,7 @@ func main() {
 
 	//首页 hotness类
 	beego.Router("/:tab([A-Za-z]+)/", &handler.MainHandler{})
-	//http://localhost/lastest/page-2/
+	//http://localhost/latest/page-2/
 	beego.Router("/:tab([A-Za-z]+)/page-:page([1-9]\\d*)/", &handler.MainHandler{})
 
 	//详情页面
@@ -127,7 +127,7 @@ func main() {
 		beego.Router("/category/:cid:int/page-:page([1-9]\\d*)/", &handler.CategoryHandler{})
 
 		beego.Router("/category/:tab([A-Za-z]+)/:name([\\x{4e00}-\\x{9fa5}A-Za-z]+)/", &handler.CategoryHandler{})
-		//http://localhost/category/lastest/page-2/
+		//http://localhost/category/latest/page-2/
 		beego.Router("/category/:tab([A-Za-z]+)/:name([\\x{4e00}-\\x{9fa5}A-Za-z]+)/page-:page([1-9]\\d*)/", &handler.CategoryHandler{})
 
 		beego.Router("/category/:name([\\x{4e00}-\\x{9fa5}A-Za-z]+)/", &handler.CategoryHandler{})
